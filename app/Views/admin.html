@@ -1,0 +1,23 @@
+<h1>Gerenciador de Produtos</h1>
+
+<a href="http://localhost/RodrigoStore/?pagina=admin&metodo=add">Adicionar Produto</a><br><br>
+<hr>
+<br><table border="2">
+	<tr>
+		<th>ID</th>
+		<th>TÍTULO</th>
+		<th>ALTERAÇÃO</th>
+		<th>DELEÇÃO</th>
+	</tr>
+
+
+	{% for produto in produtos %}
+	<tr>
+		<th>{{produto.id}}</th>
+		<th>{{produto.productName}}</th>
+		<th><a href="http://localhost/RodrigoStore/?pagina=admin&metodo=change&id={{produto.id}}">ALTERAR</a></th>
+		<th><a href="http://localhost/RodrigoStore/?pagina=admin&metodo=delete&id={{produto.id}}">DELETAR</a></th>
+	</tr>
+	{% endfor %}
+
+</table>

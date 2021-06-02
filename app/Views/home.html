@@ -1,0 +1,9 @@
+<h1>Produtos:</h1>
+{% for produto in produtos %}
+	<article>
+		<h2><a href="">{{produto.productName}}</a></h2>
+		<p>{{produto.descricao}}</p>
+        <h3>{{produto.preco}}</h3>
+	</article>
+{% endfor %}
+    

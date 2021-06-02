@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        /* CSS RESET */
+        html {box-sizing: border-box;font-size: 16px;}
+        *, *:before, *:after {box-sizing: inherit;}
+        body, h1, h2, h3, h4, h5, h6, p, ol, ul {margin: 0;padding: 0;font-weight: normal;}
+        ol, ul {list-style: none;}
+        a:link{text-decoration: none;color: black;}
+        a:visited{text-decoration: none; color: black;}
+        a:active{color: black;}
+        img {max-width: 100%;height: auto;}
+
+        /* HEADER */
+        header{
+            display: flex;
+            justify-content: space-between;
+            height: 10vh;
+            align-items: center;
+            background-color: beige;
+        }
+        header h2{
+            margin: auto 20px;
+        }
+        header h1 a{
+            color: black;
+            margin-left: 50px;
+        }
+        /* MAIN */
+        main{
+            height: 100vh;
+        }
+        .conteudo{
+            width: 80%;
+            height: 100vh;
+            margin: 0 auto;
+        }
+        /* FOOTER */
+        footer{
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+        }
+        footer p{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2><a href="http://localhost/RodrigoStore/">Home</a></h2>
+        <h1>RodrigoStore</h1>
+        <h2><a href="http://localhost/RodrigoStore/?pagina=admin">ADMIN</a></h2>
+    </header>
+    <main>
+        <div class="conteudo">{{conteudo}}</div>
+    </main>
+    <footer>
+        <p>Desenvolvido por Rodrigocods</p>
+    </footer>
+    
+</body>
+</html>
