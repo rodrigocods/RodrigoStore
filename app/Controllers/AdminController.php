@@ -1,10 +1,12 @@
 <?php
 
+namespace App\Controllers;
+
 class AdminController{
 
     public function index(){
 
-        $produtos = Produto::getAll();
+        $produtos = \App\Models\Produto::getAll();
 
         $loader = new \Twig\Loader\FilesystemLoader('app/Views');
 		$twig = new \Twig\Environment($loader);
@@ -34,7 +36,7 @@ class AdminController{
     public function insert(){
 
         try {
-            Produto::insert($_POST);
+            \App\Models\Produto::insert($_POST);
 
             echo '<script>alert("Produto inserida com sucesso!");</script>';
             echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
@@ -51,7 +53,7 @@ class AdminController{
 		$twig = new \Twig\Environment($loader);
 		$template = $twig->load('update.html');        
 
-        $produto = Produto::search($_GET['id']);
+        $produto = \App\Models\Produto::search($_GET['id']);
 
         $paramentros = array();
         $paramentros['id'] = $produto->id;
@@ -66,7 +68,7 @@ class AdminController{
     public function update(){
 
         try{
-            Produto::update($_POST);
+            \App\Models\Produto::update($_POST);
 
             echo '<script>alert("Produto alterado com sucesso!");</script>';
             echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
@@ -80,7 +82,7 @@ class AdminController{
 
         $id = $_GET['id'];
         try{
-            Produto::delete($id);
+            \App\Models\Produto::delete($id);
 
             echo '<script>alert("Produto excluído com sucesso!");</script>';
             echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';

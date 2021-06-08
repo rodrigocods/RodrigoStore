@@ -1,11 +1,13 @@
 <?php
 
+namespace App\Controllers;
+
 class HomeController{
 
     public function index(){
 
         try{
-            $produtos = Produto::getAll();
+            $produtos = \App\Models\Produto::getAll();
 
             $loader = new \Twig\Loader\FilesystemLoader('app/Views');
             $twig = new \Twig\Environment($loader);

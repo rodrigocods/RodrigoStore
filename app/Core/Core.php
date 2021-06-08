@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Core{
 
     public function start($urlGet){
@@ -11,9 +13,9 @@ class Core{
         }
         
         if(isset($urlGet['pagina'])){
-            $controller = ucfirst($urlGet['pagina']."Controller");
+            $controller = ucfirst("\App\Controllers\\".$urlGet['pagina']."Controller");
         } else {
-            $controller = "HomeController";
+            $controller = "\App\Controllers\HomeController";
         }
 
         if(isset($urlGet['id']) && $urlGet['id'] != null) {
