@@ -6,16 +6,16 @@ class AdminController{
 
     public function index(){
 
-        $produtos = \App\Models\Produto::getAll();
+        $products = \App\Models\Product::getAll();
 
         $loader = new \Twig\Loader\FilesystemLoader('app/Views');
 		$twig = new \Twig\Environment($loader);
 		$template = $twig->load('admin.html');
 
-        $paramentros = array();
-        $paramentros["produtos"] = $produtos;
+        $parameters = array();
+        $parameters["products"] = $products;
 
-        $conteudo = $template->render($paramentros);
+        $conteudo = $template->render($parameters);
         echo $conteudo;
 
     }
@@ -26,9 +26,9 @@ class AdminController{
 			$twig = new \Twig\Environment($loader);
 			$template = $twig->load('add.html');
 
-            $paramentros = [];
+            $parameters = [];
 
-            $conteudo = $template->render($paramentros);
+            $conteudo = $template->render($parameters);
             echo $conteudo;
 
     }
@@ -36,10 +36,15 @@ class AdminController{
     public function insert(){
 
         try {
-            \App\Models\Produto::insert($_POST);
-
-            echo '<script>alert("Produto inserida com sucesso!");</script>';
-            echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
+            $res = \App\Models\Product::insert($_POST);
+            
+            if($res == true){
+                echo '<script>alert("Product successfully inserted!");</script>';
+                echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';  
+            } else{
+                echo '<script>alert("Failed to insert product!");</script>';
+                echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=add"</script>';
+            }
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
             echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=add"</script>';
@@ -47,30 +52,32 @@ class AdminController{
 
     }
 
+    // Change method used by redirecting the user to a page where he can modify such as product information
     public function change(){
 
         $loader = new \Twig\Loader\FilesystemLoader('app/Views');
 		$twig = new \Twig\Environment($loader);
 		$template = $twig->load('update.html');        
 
-        $produto = \App\Models\Produto::search($_GET['id']);
+        $product = \App\Models\Product::search($_GET['id']);
 
-        $paramentros = array();
-        $paramentros['id'] = $produto->id;
-        $paramentros['productName'] = $produto->productName;
-        $paramentros['descricao'] = $produto->descricao;
-        $paramentros['preco'] = $produto->preco;
+        $parameters = array();
+        $parameters['id'] = $product->id;
+        $parameters['product_name'] = $product->product_name;
+        $parameters['description'] = $product->description;
+        $parameters['price'] = $product->price;
+        $parameters['quantity'] = $product->quantity;
 
-        $conteudo = $template->render($paramentros);
+        $conteudo = $template->render($parameters);
         echo $conteudo;
     }
 
     public function update(){
 
         try{
-            \App\Models\Produto::update($_POST);
+            \App\Models\Product::update($_POST);
 
-            echo '<script>alert("Produto alterado com sucesso!");</script>';
+            echo '<script>alert("Product successfully updated!");</script>';
             echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
         } catch (Exception $e){
             echo '<script>alert("'.$e->getMessage().'");</script>';
@@ -82,9 +89,9 @@ class AdminController{
 
         $id = $_GET['id'];
         try{
-            \App\Models\Produto::delete($id);
+            \App\Models\Product::delete($id);
 
-            echo '<script>alert("Produto excluído com sucesso!");</script>';
+            echo '<script>alert("Product successfully deleted!");</script>';
             echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';

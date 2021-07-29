@@ -1,14 +1,17 @@
-<h1>Criar Produto</h1>
+<h1>Add Product</h1>
 
 <form method="post" action="?pagina=admin&metodo=insert">
-	<span>Nome</span><br>
-	<input type="text" name="productName" size="30"><br><br>
+	<span>Name</span><br>
+	<input type="text" name="product_name" size="30" required><br><br>
 
-	<span>Descrição</span><br>
-	<textarea name="descricao" cols="40" rows="10"></textarea><br><br>
+	<span>Description</span><br>
+	<textarea name="description" cols="40" rows="10" required></textarea><br><br>
 
-    <span>Preço</span><br>
-	<input type="text" name="preco" size="30" placeholder="Valor com ponto separando os centavos"><br><br>
+    <span>Price</span><br>
+	<input type="text" name="price" size="30" required><br><br>
+
+	<span>Quantity</span><br>
+	<input type="text" name="quantity" required><br><br>
 
 	<input type="submit" value="Cadastrar">
 </form>
