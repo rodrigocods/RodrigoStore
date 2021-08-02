@@ -14,9 +14,7 @@ class User{
 
         $result = $sql->fetchObject();
 
-        if (!$result) {
-            throw new \Exception("Incorrect email and/or password!");
-            
+        if (!$result) {     
             return False;
         }
 
