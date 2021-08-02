@@ -6,14 +6,14 @@ class Core{
 
     public function start($urlGet){
         
-        if (isset($urlGet['metodo'])) {
-            $metodo = $urlGet['metodo'];
+        if (isset($urlGet['method'])) {
+            $method = $urlGet['method'];
         } else {
-            $metodo = 'index';
+            $method = 'index';
         }
         
-        if(isset($urlGet['pagina'])){
-            $controller = ucfirst("\App\Controllers\\".$urlGet['pagina']."Controller");
+        if(isset($urlGet['page'])){
+            $controller = ucfirst("\App\Controllers\\".$urlGet['page']."Controller");
         } else {
             $controller = "\App\Controllers\HomeController";
         }
@@ -24,7 +24,7 @@ class Core{
             $id = null;
         }
 
-        call_user_func_array(array(new $controller, $metodo), array());
+        call_user_func_array(array(new $controller, $method), array());
 
     }
 }

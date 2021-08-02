@@ -15,8 +15,8 @@ class AdminController{
         $parameters = array();
         $parameters["products"] = $products;
 
-        $conteudo = $template->render($parameters);
-        echo $conteudo;
+        $content = $template->render($parameters);
+        echo $content;
 
     }
 
@@ -28,8 +28,8 @@ class AdminController{
 
             $parameters = [];
 
-            $conteudo = $template->render($parameters);
-            echo $conteudo;
+            $content = $template->render($parameters);
+            echo $content;
 
     }
 
@@ -40,14 +40,14 @@ class AdminController{
             
             if($res == true){
                 echo '<script>alert("Product successfully inserted!");</script>';
-                echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';  
+                echo '<script>location.href="http://localhost/RodrigoStore/?page=admin&method=index"</script>';  
             } else{
                 echo '<script>alert("Failed to insert product!");</script>';
-                echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=add"</script>';
+                echo '<script>location.href="http://localhost/RodrigoStore/?page=admin&method=add"</script>';
             }
-        } catch(Exception $e) {
+        } catch(\Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=add"</script>';
+            echo '<script>location.href="http://localhost/RodrigoStore/?page=admin&method=add"</script>';
         }
 
     }
@@ -68,8 +68,8 @@ class AdminController{
         $parameters['price'] = $product->price;
         $parameters['quantity'] = $product->quantity;
 
-        $conteudo = $template->render($parameters);
-        echo $conteudo;
+        $content = $template->render($parameters);
+        echo $content;
     }
 
     public function update(){
@@ -78,10 +78,10 @@ class AdminController{
             \App\Models\Product::update($_POST);
 
             echo '<script>alert("Product successfully updated!");</script>';
-            echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
-        } catch (Exception $e){
+            echo '<script>location.href="http://localhost/RodrigoStore/?page=admin&method=index"</script>';
+        } catch (\Exception $e){
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=change&id='.$_POST['id'].'"</script>';
+            echo '<script>location.href="http://localhost/RodrigoStore/?page=admin&method=change&id='.$_POST['id'].'"</script>';
         }
     }
 
@@ -92,10 +92,10 @@ class AdminController{
             \App\Models\Product::delete($id);
 
             echo '<script>alert("Product successfully deleted!");</script>';
-            echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
-        } catch(Exception $e) {
+            echo '<script>location.href="http://localhost/RodrigoStore/?page=admin&method=index"</script>';
+        } catch(\Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/RodrigoStore/?pagina=admin&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/RodrigoStore/?page=admin&method=index"</script>';
         }
 
     }

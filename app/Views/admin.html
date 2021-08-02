@@ -1,6 +1,6 @@
 <h1>Product Handler</h1>
 
-<a href="http://localhost/RodrigoStore/?pagina=admin&metodo=add"><button>Add products</button></a><br><br>
+<a href="http://localhost/RodrigoStore/?page=admin&method=add"><button>Add products</button></a><br><br>
 
 <hr>
 
@@ -17,8 +17,8 @@
 	<tr>
 		<th>{{product.id}}</th>
 		<th>{{product.product_name}}</th>
-		<th><a href="http://localhost/RodrigoStore/?pagina=admin&metodo=change&id={{product.id}}">ALTER</a></th>
-		<th><a href="http://localhost/RodrigoStore/?pagina=admin&metodo=delete&id={{product.id}}">DELETE</a></th>
+		<th><a href="http://localhost/RodrigoStore/?page=admin&method=change&id={{product.id}}">ALTER</a></th>
+		<th><a href="http://localhost/RodrigoStore/?page=admin&method=delete&id={{product.id}}">DELETE</a></th>
 	</tr>
 	{% endfor %}
 

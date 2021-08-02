@@ -55,13 +55,17 @@
     <header>
         <h2><a href="http://localhost/RodrigoStore/">Home</a></h2>
         <h1>RodrigoStore</h1>
-        <h2><a href="http://localhost/RodrigoStore/?pagina=admin">ADMIN</a></h2>
+        <h2>
+            {{login}}
+            |
+            <a href="http://localhost/RodrigoStore/?page=admin">Admin</a>
+        </h2>
     </header>
     <main>
-        <div class="conteudo">{{conteudo}}</div>
+        <div class="content">{{content}}</div>
     </main>
     <footer>
-        <p>Desenvolvido por Rodrigocods</p>
+        <p>Developed por Rodrigocods</p>
     </footer>
     
 </body>

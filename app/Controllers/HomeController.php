@@ -13,12 +13,12 @@ class HomeController{
             $twig = new \Twig\Environment($loader);
             $template = $twig->load('home.html');
 
-            $paramentros = array();
-            $paramentros["products"] = $products;
+            $parameters = array();
+            $parameters["products"] = $products;
 
-            $conteudo = $template->render($paramentros);
-            echo $conteudo;
-        } catch(Exception $e){
+            $content = $template->render($parameters);
+            echo $content;
+        } catch(\Exception $e){
             echo $e->getMessage();
         }
     }

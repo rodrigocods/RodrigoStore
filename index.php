@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // require_once 'app/Controllers/HomeController.php';
 // require_once 'app/Core/Core.php';
 // require_once 'app/Models/Produto.php';
@@ -17,6 +19,12 @@ ob_start();
 	$saida = ob_get_contents();
 ob_end_clean();
 
-$template = str_replace('{{conteudo}}', $saida, $template);
+if(isset($_SESSION['loggedin'])){
+	$template = str_replace('{{login}}', '<a href="http://localhost/RodrigoStore/?page=login&method=logout">Logout</a>', $template); 
+}else{
+	$template = str_replace('{{login}}', '<a href="http://localhost/RodrigoStore/?page=login">Login</a>', $template);
+}
+
+$template = str_replace('{{content}}', $saida, $template);
 
 echo $template;

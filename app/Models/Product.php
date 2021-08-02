@@ -31,7 +31,7 @@ class Product{
         $result = $sql->fetchObject();
 
         if (!$result) {
-            throw new Exception("Não foi encontrado nenhum registro no banco");		
+            throw new \Exception("Did not find anything in the database");		
         }
 
         return $result;
@@ -69,7 +69,7 @@ class Product{
 		$res = $sql->execute();
 
         if($res == 0){
-            throw new Exception("Failed to update product");
+            throw new \Exception("Failed to update product");
 
             return false;
         }
@@ -87,7 +87,7 @@ class Product{
 		$res = $sql->execute();
 
         if($res == 0){
-            throw new Exception("Failed to delete product");
+            throw new \Exception("Failed to delete product");
 
             return false;
         }
