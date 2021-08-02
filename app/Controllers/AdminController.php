@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+if($_SESSION['admin'] == false){
+    echo '<script>location.href="http://localhost/RodrigoStore/?page=home"</script>';
+};
+
 class AdminController{
 
     public function index(){

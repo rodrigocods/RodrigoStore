@@ -20,7 +20,11 @@ ob_start();
 ob_end_clean();
 
 if(isset($_SESSION['loggedin'])){
-	$template = str_replace('{{login}}', '<a href="http://localhost/RodrigoStore/?page=login&method=logout">Logout</a>', $template); 
+	if($_SESSION['admin'] == true){
+		$template = str_replace('{{login}}', '<a href="http://localhost/RodrigoStore/?page=login&method=logout">Logout</a>|<a href="http://localhost/RodrigoStore/?page=admin">Admin</a>', $template); 
+	}else{
+		$template = str_replace('{{login}}', '<a href="http://localhost/RodrigoStore/?page=login&method=logout">Logout</a>', $template); 
+	}
 }else{
 	$template = str_replace('{{login}}', '<a href="http://localhost/RodrigoStore/?page=login">Login</a>', $template);
 }
