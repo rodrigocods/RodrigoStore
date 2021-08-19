@@ -94,6 +94,9 @@ main{
     border-top-right-radius: 5%;
 }
 .content div h4{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin-left: 0.6vw;
 }
 .content div p{
@@ -114,6 +117,45 @@ main{
     background-color: rgb(0,0,0,0);
     max-width: none;
 }
+
+/* PRODUCT PAGE */
+.content .product{
+    width: 100%;
+    border-radius: 2%;
+}
+.content .leftCol{
+    width:50%;
+    margin: 0;
+    float: left;
+    max-width: none;
+    box-shadow: none;
+}
+.content .leftCol img{
+    width: 40vw;
+    height: 50vh;
+}
+.content .centerCol{
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    float: left;
+    width: 25%;
+}
+.content .centerCol h4, .content .centerCol p{
+    overflow:auto;
+    white-space:normal;
+}
+.content .rightCol{
+    width: 25%;
+    margin: 0;
+    box-shadow: none;
+    max-width: none;
+    float: right;
+}
+.content .product{
+    max-width: none;
+}
+
 /* FOOTER */
 footer{
     height: 5vh;

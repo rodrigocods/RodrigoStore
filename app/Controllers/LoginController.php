@@ -14,7 +14,7 @@ class LoginController{
             $content = $template->render();
             echo $content;
         }
-        catch(Exception $e){
+        catch(\Exception $e){
             echo $e->getMessage();
         }
     }
