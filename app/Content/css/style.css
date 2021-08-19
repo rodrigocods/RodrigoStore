@@ -110,12 +110,14 @@ main{
 .content .admin{
     background-color: rgb(0,0,0,0);
     max-width: none;
+    box-shadow: none;
 }
 
 /* ADD PAGE */
 .content .add{
     background-color: rgb(0,0,0,0);
     max-width: none;
+    box-shadow: none;
 }
 
 /* PRODUCT PAGE */
@@ -156,6 +158,12 @@ main{
     max-width: none;
 }
 
+/* UPDATE PAGE */
+.content .update{
+    background-color: rgb(0,0,0,0);
+    max-width: none;
+    box-shadow: none;
+}
 /* FOOTER */
 footer{
     height: 5vh;
