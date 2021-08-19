@@ -87,6 +87,7 @@ main{
     background-color: white;
     border-radius: 5%;
     margin: 0.6vw;
+    box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(128, 128, 128, 0.25);
 }
 .content div img{
     border-top-left-radius: 5%;
