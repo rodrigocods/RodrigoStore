@@ -21,7 +21,7 @@ class User{
         return $result;
     }
 
-    public static function insert($data){
+    public static function insert(){
 
         $con = \App\Database\Connection::getConn();
 
@@ -31,6 +31,18 @@ class User{
         $sql->bindValue(':em', $_POST['email']);
         $sql->bindValue(':pw', $_POST['password']);
         $res =$sql->execute();
+
+        if ($res == false) {
+            return false;
+        }
+
+        $user = \App\Models\User::search($_POST['email']);
+
+        $sql = 'INSERT INTO cart(total, user_id) values(:to, :id)';
+        $sql = $con->prepare($sql);
+        $sql->bindValue(':to', 0);
+        $sql->bindValue(':id', $user->id);
+        $res = $sql->execute();
 
         if ($res == false) {
             return false;

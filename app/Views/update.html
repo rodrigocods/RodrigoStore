@@ -1,19 +1,21 @@
-<h1>Alter Product</h1>
+<div class="update">
+	<h1>Alter Product</h1>
 
-<form method="post" action="?page=admin&method=update">
-	<span>Name</span><br>
-	<input type="text" name="product_name" size="30" value="{{product_name}}"><br><br>
+	<form method="post" action="?page=admin&method=update">
+		<span>Name</span><br>
+		<input type="text" name="product_name" size="30" value="{{product_name}}"><br><br>
 
-	<span>Description</span><br>
-	<textarea name="description" cols="40" rows="10">{{description}}</textarea><br><br>
+		<span>Description</span><br>
+		<textarea name="description" cols="40" rows="10">{{description}}</textarea><br><br>
 
-    <span>Price</span><br>
-	<input type="text" name="price" size="30" value="{{price}}"><br><br>
+		<span>Price</span><br>
+		<input type="text" name="price" size="30" value="{{price}}"><br><br>
 
-	<span>Quantity</span><br>
-	<input type="text" name="quantity" value="{{quantity}}"><br><br>
+		<span>Quantity</span><br>
+		<input type="text" name="quantity" value="{{quantity}}"><br><br>
 
-    <input type="hidden" name="id" value="{{id}}">
+		<input type="hidden" name="id" value="{{id}}">
 
-	<input type="submit" value="Update">
-</form>
+		<input type="submit" value="Update">
+	</form>
+</div>

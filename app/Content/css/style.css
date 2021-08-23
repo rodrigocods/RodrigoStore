@@ -57,6 +57,18 @@ header a{
 .header-right{
     float: right;
 }
+.header-right h2{
+    display: inline-block;
+}
+.header-right .cart{
+    padding: 3vh 0 3vh 0;
+    float: right;
+}
+.header-right .cart i{
+    color: white;
+    font-size: 4vh;
+    float: right;
+}
 header h1, header h2, header h3, header h3, header h4, header h5, header p, header a{
     color: white;
 }
@@ -126,14 +138,14 @@ main{
     border-radius: 2%;
 }
 .content .leftCol{
-    width:50%;
+    width:40%;
     margin: 0;
     float: left;
     max-width: none;
     box-shadow: none;
 }
 .content .leftCol img{
-    width: 40vw;
+    width: 34vw;
     height: 50vh;
 }
 .content .centerCol{
@@ -141,23 +153,50 @@ main{
     margin: 0;
     box-shadow: none;
     float: left;
-    width: 25%;
+    width: 40%;
 }
 .content .centerCol h4, .content .centerCol p{
     overflow:auto;
     white-space:normal;
 }
 .content .rightCol{
-    width: 25%;
-    margin: 0;
+    width: 16%;
+    border: 0.5px solid grey;
+    margin: 1%;
     box-shadow: none;
     max-width: none;
     float: right;
 }
+.content .rightCol button{
+    margin: 0 0 10px 10px;
+}
 .content .product{
     max-width: none;
 }
-
+/* CART PAGE */
+.content .cart table img{
+    width: 34vw;
+    height: 50vh;
+}
+.content .cart{
+    max-width: none;
+    width: 96%;
+    padding: 2%;
+    border-radius: 0;
+}
+.content .cart .leftCol{
+    width: 75%;
+}
+.content .cart .leftCol table{
+    border-collapse: collapse;
+}
+.content .cart .leftCol table tr{
+    border-bottom: 1px solid grey;
+}
+.content .cart .rightCol{
+    width: 20%;
+    border: 0;
+}
 /* UPDATE PAGE */
 .content .update{
     background-color: rgb(0,0,0,0);
