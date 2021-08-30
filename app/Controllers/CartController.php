@@ -6,6 +6,10 @@ if($_SESSION['loggedin'] == false){
     echo '<script>location.href="http://localhost/RodrigoStore/?page=home"</script>';
 };
 
+if($_SESSION['admin'] == true){
+    echo '<script>location.href="http://localhost/RodrigoStore/?page=home"</script>';
+}
+
 class CartController{
 
     public function index(){
