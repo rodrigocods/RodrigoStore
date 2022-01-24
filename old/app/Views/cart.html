@@ -1,0 +1,36 @@
+<div class="cart">
+    <h1>Shopping Cart</h1>
+    <hr>
+    <div class="leftCol">
+        <table>
+            {% for product in products %}
+            <tr>
+                <td><img src="app/Content/images/{{product.id}}.jpg" alt=""></td>
+                <td>
+                    <h4><a href="http://localhost/RodrigoStore/?page=product&method=getProduct&id={{product.id}}">{{product.product_name}}</a></h4>
+                    <a href="http://localhost/RodrigoStore/?page=cart&method=delete&id={{product.id}}"><p>Delete</p></a>
+                    <p>Quantity: <select name="quantity" onchange="updateCartQuantity('{{product.id}}')" id="quantity{{product.id}}">
+                        <option value="{{product.quantity}}" selected>{{product.quantity}}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select></p>
+                </td>
+                <td><h4>{{product.price}}</h4></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <h4>Subtotal: {{total}}</h4>
+    </div>
+    <div class="rightCol">
+        <h4>Subtotal: {{total}}</h4>
+        <a href=""><button>Proceed to checkout</button></a>
+    </div>
+</div>

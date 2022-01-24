@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(19, 25, 33);
+}
+a{
+    text-decoration: none !important;
+}
+body{
+    background-color: #efefef;
+}
+/* HEADER */
+.logo img{
+    height:8vh;
+    padding: 1vh;
+    float: left;
+}
+header{
+    padding:2vh;
+    height: 10vh;
+    background-color: rgb(19, 25, 33);
+}
+header form{
+    font-size: 0;
+}
+header form input{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 20vw;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    line-height: 6vh;
+    border: 0;
+    float: left;
+    font-size: 2.8vh;
+}
+header form button{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    line-height: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    line-height: 6vh;
+    font-size: 4vh;
+    background-color: white;
+    border: 0;
+    float: left;
+}
+header form button:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+header form button i{
+    color: rgb(19, 25, 33);
+}
+header a{
+    line-height: 10vh;
+}
+.header-right{
+    float: right;
+}
+.header-right h2{
+    display: inline-block;
+}
+.header-right .cart{
+    padding: 3vh 0 3vh 0;
+    float: right;
+}
+.header-right .cart i{
+    color: white;
+    font-size: 4vh;
+    float: right;
+}
+header h1, header h2, header h3, header h3, header h4, header h5, header p, header a{
+    color: white;
+}
+header h2{
+    margin: auto 20px;
+}
+header h1 a{
+    margin-left: 50px;
+}
+
+/* BANNER */
+.banner{
+    min-height: 86vh;
+}
+.banner .leftCol{
+    float: left;
+    height: 86vh;
+    width: 40vw;
+    position: relative;
+}
+.banner .rightCol{
+    float: right;
+    position: relative;
+    width: 58vw;
+    height: 86vh;
+}
+.banner .rightCol img{
+    position: absolute;
+    top: 50%;
+    left: 50%;                        
+    transform: translate(-50%, -50%);
+    /* margin-right: -50%; */
+    opacity: 70%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 700px;
+    height: 450px;
+}
+.banner .leftCol .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;                        
+    transform: translate(-50%, -50%);
+    /* margin-right: -50%; */
+    width: 80%;
+}
+
+/* MAIN */
+main{
+    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    background-color: #efefef;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-height: 60vh;
+    margin: 6vw;
+}
+.content div{
+    max-width: 230px;
+    background-color: white;
+    border-radius: 5%;
+    margin: 0.6vw;
+    box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(128, 128, 128, 0.25);
+}
+.content div img{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.content div h4{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 0.6vw;
+}
+.content div p{
+    margin-left: 0.6vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* ADMIN PAGE */
+.content .admin{
+    background-color: rgb(0,0,0,0);
+    max-width: none;
+    box-shadow: none;
+}
+
+/* ADD PAGE */
+.content .add{
+    background-color: rgb(0,0,0,0);
+    max-width: none;
+    box-shadow: none;
+}
+
+/* PRODUCT PAGE */
+.content .product{
+    width: 100%;
+    border-radius: 2%;
+}
+.content .leftCol{
+    width:40%;
+    margin: 0;
+    float: left;
+    max-width: none;
+    box-shadow: none;
+}
+.content .leftCol img{
+    width: 34vw;
+    height: 50vh;
+}
+.content .centerCol{
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    float: left;
+    width: 40%;
+}
+.content .centerCol h4, .content .centerCol p{
+    overflow:auto;
+    white-space:normal;
+}
+.content .rightCol{
+    width: 16%;
+    border: 0.5px solid grey;
+    margin: 1%;
+    box-shadow: none;
+    max-width: none;
+    float: right;
+}
+.content .rightCol button{
+    margin: 0 0 10px 10px;
+}
+.content .product{
+    max-width: none;
+}
+/* CART PAGE */
+.content .cart table img{
+    width: 34vw;
+    height: 50vh;
+}
+.content .cart{
+    max-width: none;
+    width: 96%;
+    padding: 2%;
+    border-radius: 0;
+}
+.content .cart .leftCol{
+    width: 75%;
+}
+.content .cart .leftCol table{
+    border-collapse: collapse;
+}
+.content .cart .leftCol table tr{
+    border-bottom: 1px solid grey;
+}
+.content .cart .rightCol{
+    width: 20%;
+    border: 0;
+}
+/* UPDATE PAGE */
+.content .update{
+    background-color: rgb(0,0,0,0);
+    max-width: none;
+    box-shadow: none;
+}
+/* FOOTER */
+footer{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    margin: auto;
+}
