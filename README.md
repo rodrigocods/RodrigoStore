@@ -9,7 +9,7 @@ This project is basically an e-commerce development
 - php "7.2.24"
 - laravel "5.8.38"
 - composer
-- mariadb 10.4.20 or equivalent compatible database
+- mariadb 10.1.32 or equivalent compatible database
 
 ## Installation
 
