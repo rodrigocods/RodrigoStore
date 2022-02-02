@@ -11,6 +11,6 @@ class State extends Model
 
     public function city()
     {
-        $this->hasMany('App\Models\City');
+        $this->hasMany('App\Models\City', 'state_id');
     }
 }
