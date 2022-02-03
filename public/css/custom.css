@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root
+{
+    --font-color-1: #464646;
+    --font-color-2: #636363;
+    --font-color-3: #808080;
+}
+body
+{
+    font-family: Roboto, Arial, sans-serif;
+    background-color: var(--light);
+}
+.admin-menu
+{
+    position: fixed;
+    width: 20vw;
+    font-size: 20px;
+    left: 0;
+    display: flex;
+    color: var(--font-color-2);
+}
+.admin-menu h5
+{
+    font-size: 18px;
+}
+.admin-menu p
+{
+    font-size: 14px;
+}
+.side-menu .nav-link
+{
+    color: var(--white);
+    width: 90%;
+    margin-left: 10%;
+    border-radius: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.side-menu .nav-link.active
+{
+    color: var(--primary);
+    background-color: var(--white);
+}
+/* .admin-tabs
+{
+    width: 15vw;
+} */
+.admin-content
+{
+    margin-left: 20vw;
+}
+.sub-menu-header .user-group span
+{
+    font-size: 10px;
+}
+#v-pills-subtab .nav-link, #v-pills-subtab.nav-pills .nav-link.active
+{
+    background-color: transparent;
+    border-radius: 0px;
+    color: var(--font-color-3);
+    font-size: 14px;
+}
+#v-pills-subtab.nav-pills .nav-link.active
+{
+    color: var(--primary);
+    border-right: 2px solid var(--primary);
+}
+

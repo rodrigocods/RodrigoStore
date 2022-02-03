@@ -1,5 +1,21 @@
 {
     "/plugins/bootstrap/bootstrap.css": "/plugins/bootstrap/bootstrap.css",
     "/plugins/jquery/jquery.js": "/plugins/jquery/jquery.js",
-    "/plugins/bootstrap/bootstrap.js": "/plugins/bootstrap/bootstrap.js"
+    "/plugins/bootstrap/bootstrap.js": "/plugins/bootstrap/bootstrap.js",
+    "/plugins/fontAwesome/css/fontAwesome.css": "/plugins/fontAwesome/css/fontAwesome.css",
+    "/plugins/fontAwesome/webfonts/fa-brands-400.eot": "/plugins/fontAwesome/webfonts/fa-brands-400.eot",
+    "/plugins/fontAwesome/webfonts/fa-brands-400.svg": "/plugins/fontAwesome/webfonts/fa-brands-400.svg",
+    "/plugins/fontAwesome/webfonts/fa-brands-400.ttf": "/plugins/fontAwesome/webfonts/fa-brands-400.ttf",
+    "/plugins/fontAwesome/webfonts/fa-brands-400.woff": "/plugins/fontAwesome/webfonts/fa-brands-400.woff",
+    "/plugins/fontAwesome/webfonts/fa-brands-400.woff2": "/plugins/fontAwesome/webfonts/fa-brands-400.woff2",
+    "/plugins/fontAwesome/webfonts/fa-regular-400.eot": "/plugins/fontAwesome/webfonts/fa-regular-400.eot",
+    "/plugins/fontAwesome/webfonts/fa-regular-400.svg": "/plugins/fontAwesome/webfonts/fa-regular-400.svg",
+    "/plugins/fontAwesome/webfonts/fa-regular-400.ttf": "/plugins/fontAwesome/webfonts/fa-regular-400.ttf",
+    "/plugins/fontAwesome/webfonts/fa-regular-400.woff": "/plugins/fontAwesome/webfonts/fa-regular-400.woff",
+    "/plugins/fontAwesome/webfonts/fa-regular-400.woff2": "/plugins/fontAwesome/webfonts/fa-regular-400.woff2",
+    "/plugins/fontAwesome/webfonts/fa-solid-900.eot": "/plugins/fontAwesome/webfonts/fa-solid-900.eot",
+    "/plugins/fontAwesome/webfonts/fa-solid-900.svg": "/plugins/fontAwesome/webfonts/fa-solid-900.svg",
+    "/plugins/fontAwesome/webfonts/fa-solid-900.ttf": "/plugins/fontAwesome/webfonts/fa-solid-900.ttf",
+    "/plugins/fontAwesome/webfonts/fa-solid-900.woff": "/plugins/fontAwesome/webfonts/fa-solid-900.woff",
+    "/plugins/fontAwesome/webfonts/fa-solid-900.woff2": "/plugins/fontAwesome/webfonts/fa-solid-900.woff2"
 }
